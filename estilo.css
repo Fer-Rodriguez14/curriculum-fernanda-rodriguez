@@ -1,1 +1,112 @@
 @charset "utf-8";
+
+/*configuraciones generales*/
+
+@font-face {
+    font-family: "display mi nombre";
+    src: url(fonts/DMSerifDisplay-Italic.ttf) format(truetype);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "unna B";
+    src: url(fonts/Unna-Bold.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "unna R";
+    src: url(fonts/Unna-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "unna I";
+    src: url(fonts/Unna-Italic.ttf) format(truetype);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "unna B I";
+    src: url(fonts/Unna-BoldItalic.ttf) format(truetype);
+    font-weight:bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "aleg sans sc B";
+    src: url(fonts/AlegreyaSansSC-Bold.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleg sans sc L";
+    src: url(fonts/AlegreyaSansSC.Light.ttf) format(truetype);
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleg sans sc R";
+    src: url(fonts/AlegreyaSansSC.Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleg sans sc";
+    src: url(fonts/AlegreyaSansSC.Thin.ttf) format(truetype);
+    font-weight: thin;
+    font-style: normal;
+}
+
+*{
+    font-family: "unna R", sans-serif;
+    font-size: 1.1rem;
+}
+
+/*aca empiezan las aplicaciones*/
+
+h1{
+    font-family: "display mi nombre", serif;
+    font-size: 6rem;
+    text-align: center;
+}
+
+h2{
+    font-family: "aleg sans sc B", sans-serif;
+    color: rgb(168, 24, 43);
+    font-size: 1.7rem;
+}
+
+h3{
+    font-family: "aleg sans sc R", sans-serif;
+}
+
+h4{
+    font-family: "unna I", sans-serif;
+}
+
+h5{ 
+    font-family: "aleg sans sc L", sans-serif;
+    color: rgb(163, 0, 54);
+    font-size: 3rem;
+    text-align: center;
+}
+
+h6{
+    font-family: "aleg sans sc L", sans-serif;
+    color: rgb(163, 0, 54);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p{
+    text-wrap-style: balance;
+    text-align: left;
+}
