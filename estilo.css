@@ -133,7 +133,7 @@ h7 {
 }
 
 p {
-    text-wrap-style: balance;
+    text-wrap-style: balance; /*la propiedad es solo text-wrap, sin style*/
     line-height: 1.7rem;
     text-align: center;
 }
@@ -150,10 +150,10 @@ a {
     background-position: center;
     background-size: cover;
     min-height: 80vh;
-    padding-top: 100px;
-    padding-right: 80px;
+    padding-top: 100px; 
+    padding-right: 80px; /*alerta de tamaño peligroso*/
     text-align: right;
-    text-wrap-style: balance;
+    text-wrap-style: balance; /*la propiedad es solo text-wrap, sin style*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,7 +178,7 @@ a {
 }
 
 #sobremi img {
-    width: 200px;
+    width: 200px; /*los tamañso de las imágenes van por html*/
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
@@ -234,7 +234,7 @@ ul {
 
 #aptitudes {
     display: flex;
-    margin: 100px;
+    margin: 100px; /*guarda que margenes tan grandes son peligrosos, no está bueno que sean mayores a 80px porque es señal de que algo se puede resolver con flex */
     flex-direction: row-reverse;
     align-items: baseline;
     max-width: 1000px;
