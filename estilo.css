@@ -33,7 +33,7 @@
 @font-face {
     font-family: "unna B I";
     src: url(fonts/Unna-BoldItalic.ttf) format(truetype);
-    font-weight:bold;
+    font-weight: bold;
     font-style: italic;
 }
 
@@ -65,48 +65,196 @@
     font-style: normal;
 }
 
-*{
+* {
     font-family: "unna R", sans-serif;
     font-size: 1.1rem;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    background-color: rgb(184, 50, 88);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
 }
 
 /*aca empiezan las aplicaciones*/
 
-h1{
+h1 {
     font-family: "display mi nombre", serif;
-    font-size: 6rem;
-    text-align: center;
+    font-size: 2.8rem;
+    line-height: 0, 3rem;
+    color: rgb(255, 255, 255);
+    text-align: right;
 }
 
-h2{
+h2 {
     font-family: "aleg sans sc B", sans-serif;
-    color: rgb(168, 24, 43);
+    color: rgb(119, 16, 45);
     font-size: 1.7rem;
 }
 
-h3{
+h3 {
+    font-family: "unna R", serif;
+    font-size: 1.2rem;
+}
+
+h4 {
     font-family: "aleg sans sc R", sans-serif;
+    color: rgb(248, 239, 242);
 }
 
-h4{
-    font-family: "unna I", sans-serif;
+
+h5 {
+    font-family: "unna I", serif;
 }
 
-h5{ 
+h6 {
     font-family: "aleg sans sc L", sans-serif;
-    color: rgb(163, 0, 54);
-    font-size: 3rem;
-    text-align: center;
+    color: rgb(248, 239, 242);
+    font-size: 1.6rem;
+    text-align: right;
 }
 
-h6{
-    font-family: "aleg sans sc L", sans-serif;
-    color: rgb(163, 0, 54);
-    font-size: 2.5rem;
-    text-align: center;
+h7 {
+    font-family: "unna I", serif;
+    color: rgb(248, 239, 242);
 }
 
-p{
+p {
     text-wrap-style: balance;
-    text-align: left;
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: double;
+    font-size: 1.2rem;
+    color: rgb(248, 239, 242);
+    line-height: 1.8rem;
+}
+
+#presentación {
+    background-image: url(img/inicio.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    padding-top: 100px;
+    padding-right: 80px;
+    text-align: right;
+    text-wrap-style: balance;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#introducción {
+    display: flex;
+    max-width: 700px;
+    margin: 2rem auto;
+    flex-direction: column;
+    gap: 30px;
+    text-align: justify;
+    line-height: 1.7rem;
+}
+
+#sobremi-academica {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+#sobremi img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#sobremi {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+}
+
+#academica {
+    flex: 2;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 20px;
+    h2 {
+        padding: 15px;
+        max-width: 450px;
+    }
+    h4{
+        background-color: rgb(184, 50, 88);
+    min-height: 5vh;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 45px;
+    max-width: 450px;
+    }
+    h5, h3{
+        max-width: 450px;
+    }
+}
+
+#frase {
+    font-family: "unna I", serif;
+    font-size: 2rem;
+    background-color: rgb(119, 16, 45);
+    min-height: 10vh;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding: 50px;
+}
+
+#aptitudes {
+    display: flex;
+    margin: 100px;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    max-width: 1000px;
+    p{
+        max-width: 1200px;
+    }
+}
+
+#contenedor {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(119, 16, 45);
+    color: rgb(248, 239, 242);
+    margin: 0
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
