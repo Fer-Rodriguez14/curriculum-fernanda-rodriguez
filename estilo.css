@@ -10,13 +10,6 @@
 }
 
 @font-face {
-    font-family: "unna B";
-    src: url(fonts/Unna-Bold.ttf) format(truetype);
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "unna R";
     src: url(fonts/Unna-Regular.ttf) format(truetype);
     font-weight: normal;
@@ -27,13 +20,6 @@
     font-family: "unna I";
     src: url(fonts/Unna-Italic.ttf) format(truetype);
     font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "unna B I";
-    src: url(fonts/Unna-BoldItalic.ttf) format(truetype);
-    font-weight: bold;
     font-style: italic;
 }
 
@@ -58,17 +44,10 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "aleg sans sc";
-    src: url(fonts/AlegreyaSansSC.Thin.ttf) format(truetype);
-    font-weight: thin;
-    font-style: normal;
-}
-
 * {
-    font-family: "unna R", sans-serif;
+    font-family: "unna R", serif;
     font-size: 1.1rem;
-    text-align: center;
+    text-align: left;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -80,8 +59,10 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px;
-    background-color: rgb(184, 50, 88);
+    padding: 50px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    background-color: rgb(109, 14, 44);
 }
 
 nav {
@@ -89,12 +70,13 @@ nav {
     gap: 30px;
 }
 
-/*aca empiezan las aplicaciones*/
+/*ACA EMPIEZAN LAS APLICACIONES*/
+
 
 h1 {
     font-family: "display mi nombre", serif;
-    font-size: 2.8rem;
-    line-height: 0, 3rem;
+    font-size: 3.8rem;
+    line-height: 6rem;
     color: rgb(255, 255, 255);
     text-align: right;
 }
@@ -103,34 +85,18 @@ h2 {
     font-family: "aleg sans sc B", sans-serif;
     color: rgb(119, 16, 45);
     font-size: 1.7rem;
+    text-align: center;
+    line-height: 3rem;
 }
 
 h3 {
-    font-family: "unna R", serif;
+    font-family: "unna I", serif;
     font-size: 1.2rem;
-}
-
-h4 {
-    font-family: "aleg sans sc R", sans-serif;
-    color: rgb(248, 239, 242);
+    text-align: center;
+    color: rgb(109, 14, 44);
 }
 
 
-h5 {
-    font-family: "unna I", serif;
-}
-
-h6 {
-    font-family: "aleg sans sc L", sans-serif;
-    color: rgb(248, 239, 242);
-    font-size: 1.6rem;
-    text-align: right;
-}
-
-h7 {
-    font-family: "unna I", serif;
-    color: rgb(248, 239, 242);
-}
 
 p {
     text-wrap-style: balance;
@@ -141,9 +107,11 @@ p {
 a {
     text-decoration: double;
     font-size: 1.2rem;
-    color: rgb(248, 239, 242);
+    color: rgb(238, 195, 208);
     line-height: 1.8rem;
 }
+
+
 
 #presentación {
     background-image: url(img/inicio.jpg);
@@ -157,104 +125,288 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    p {
+        font-family: "aleg sans sc L", sans-serif;
+        color: rgb(248, 239, 242);
+        font-size: 1.6rem;
+        text-align: right;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        font-size: 2rem;
+    }
 }
+
 
 #introducción {
     display: flex;
-    max-width: 700px;
-    margin: 2rem auto;
-    flex-direction: column;
-    gap: 30px;
-    text-align: justify;
-    line-height: 1.7rem;
-}
-
-#sobremi-academica {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 2rem auto;
-    max-width: 1200px;
-}
-
-#sobremi img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#sobremi {
-    flex: 1;
-    text-align: center;
-    margin: 20px;
-}
-
-#academica {
-    flex: 2;
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 20px;
-    h2 {
-        padding: 15px;
-        max-width: 450px;
-    }
-    h4{
-        background-color: rgb(184, 50, 88);
-    min-height: 5vh;
-    padding: 5px;
-    margin: 0px;
-    border-radius: 45px;
-    max-width: 450px;
-    }
-    h5, h3{
-        max-width: 450px;
-    }
-}
-
-#frase {
-    font-family: "unna I", serif;
-    font-size: 2rem;
-    background-color: rgb(119, 16, 45);
-    min-height: 10vh;
-    padding: 5px;
-    margin: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-ul {
-    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-    gap: 30px;
-    padding: 50px;
-}
+    justify-content: space-between;
+    align-items: center;
 
-#aptitudes {
-    display: flex;
-    margin: 100px;
-    flex-direction: row-reverse;
-    align-items: baseline;
-    max-width: 1000px;
-    p{
-        max-width: 1200px;
+    .titular_especial {
+        font-family: "aleg sans sc L", sans-serif;
+        color: rgb(109, 14, 44);
+        font-size: 3rem;
+        line-height: 2.5rem;
+        text-align: left;
+        padding: 70px;
+        margin: 100px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        box-sizing: border-box;
+    }
+
+    .info_quien_soy {
+        padding: 70px;
+        margin: 80px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        box-sizing: border-box;
+        text-align: left;
     }
 }
+
+
+#lluvia_de_palabras ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#lluvia_de_palabras li {
+    background-color: rgb(109, 14, 44);
+    color: rgb(248, 239, 242);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-family: "aleg sans sc R", serif;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/*SECCION DE MI*/
+
+#de_mi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 90px
+}
+
+#paquete_circulo {
+    margin: 80px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    padding: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .bsas {
+        text-align: center;
+        color: rgb(119, 16, 45);
+        font-family: "aleg sans sc B", sans-serif;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+    }
+
+    .minombre {
+        font-family: "unna I", serif;
+        background-color: rgb(184, 50, 88);
+        min-height: 5vh;
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+        color: rgb(248, 239, 242);
+        border-radius: 8px
+    }
+}
+
+#un_poco_mas {
+    margin-right: 100px;
+    margin-top: 90px;
+
+    p {
+        text-align: left;
+    }
+}
+
+
+/*FORMACIÓN*/
+
+
+#formación {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    p {
+        font-family: "aleg sans sc L", serif;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .fecha {
+        font-family: "unna R", serif;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+
+/*FRASE FINAL*/
+
+
+#frase {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+
+    .flor {
+        font-family: "display mi nombre", serif;
+        font-size: 20rem;
+        color: rgb(109, 14, 44);
+        padding-top: 95px;
+        margin-top: 20px;
+        margin-left: 100px;
+        padding-left: 60px;
+    }
+
+    .escrito {
+        font-family: "aleg sans sc L", sans-serif;
+        font-size: 3rem;
+        line-height: 1;
+        margin: 40px;
+        max-width: 700px;
+        text-align: left;
+        color: rgb(109, 14, 44);
+    }
+}
+
+
+/*linea de corativa*/
+
+
+.linea_divisoria {
+    border: none;
+    height: 2px;
+    background-color: rgb(184, 50, 88);
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 2px;
+}
+
+
+/*HABILIDADES*/
+
+#habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    gap: 30px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 100px;
+    }
+}
+
+
+/*APTITUDES*/
+
+
+#como_soy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 100px;
+    max-width: 1200px;
+    gap: 50px;
+
+    h2 {
+        margin-left: 100px;
+        padding-left: 100px;
+    }
+    p{
+        margin-left: 100px;
+        padding-left: 100px;
+        text-align: left;
+    }
+}
+
+
+/*footer*/
+
 
 #contenedor {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
     background-color: rgb(119, 16, 45);
-    color: rgb(248, 239, 242);
-    margin: 0
+    padding: 50px;
+    text-align: center;
+    p{
+        font-family: "aleg sans sc R", sans-serif;
+        font-size: 1rem;
+        text-align: left;
+        color: rgb(255, 255, 255);
+    }
 }
 
-footer ul {
-    display: flex;
+#contenedor{
+    .trabajemos_juntos{
+        font-family: "unna R", serif;
+        text-align: center;
+        font-size: 2rem;
+        color: rgb(255, 255, 255);
+        line-height: 2.5rem;
+    }
+    .invitacion{
+        font-family: "unna R", serif;
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgb(255, 255, 255);
+        line-height: 1.8rem;
+        max-width: 700px;
+    }
+    .noteasustes{
+        font-family: "aleg sans sc L", sans-serif;
+        text-align: center;
+        font-size: 0.8rem;
+        color: rgb(255, 255, 255);
+        line-height: 1.5rem;
+        max-width: 700px;
+    }
+}
+
+#contenedor{
+    ul{
+            display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 40px;
+    }
 }
