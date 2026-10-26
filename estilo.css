@@ -1,13 +1,17 @@
 @charset "utf-8";
 
-/*configuraciones generales*/
+/*enlase tipográfico*/
+
+/*h1*/
 
 @font-face {
-    font-family: "display mi nombre";
-    src: url(fonts/DMSerifDisplay-Italic.ttf) format(truetype);
+    font-family: "Playfair mi nombre";
+    src: url(fonts/PlayfairDisplay-Italic.ttf) format(truetype);
     font-weight: normal;
     font-style: italic;
 }
+
+/*unna*/
 
 @font-face {
     font-family: "unna R";
@@ -23,26 +27,53 @@
     font-style: italic;
 }
 
+/*alegreya sans versalita*/
+
 @font-face {
-    font-family: "aleg sans sc B";
+    font-family: "versalita B";
     src: url(fonts/AlegreyaSansSC-Bold.ttf) format(truetype);
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "aleg sans sc L";
+    font-family: "versalita L";
     src: url(fonts/AlegreyaSansSC.Light.ttf) format(truetype);
     font-weight: light;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "aleg sans sc R";
+    font-family: "versalita R";
     src: url(fonts/AlegreyaSansSC.Regular.ttf) format(truetype);
     font-weight: normal;
     font-style: normal;
 }
+
+/*alegreya sans*/
+
+@font-face {
+    font-family: "aleg sans R";
+    src: url(fonts/AlegreyaSans-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleg sans M";
+    src: url(fonts/AlegreyaSans-Medium.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aleg sans B";
+    src: url(fonts/AlegreyaSans-Bold.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*configuraciones generales*/
 
 * {
     font-family: "unna R", serif;
@@ -59,141 +90,187 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 50px;
-    padding-bottom: 40px;
-    padding-top: 40px;
-    background-color: rgb(109, 14, 44);
+    max-width: 1920px;
+    padding: 10px 100px;
+    padding-top: 10px;
+    background-color: rgb(101, 16, 39);
+    height: 90px;
+}
+
+.header_conteiner{
+    display: flex;
+    width: 1700px;
+    height: 65px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F0DACC;
 }
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    align-items: center;
+    width: 325px;
+}
+
+a {
+    text-decoration: double;
+    color: #FFF;
+    line-height: 1rem;
+    font-family: "versalita R", sans-serif;
+    font-size: 1rem;
+    width: 75px;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    max-width: 1920px;
+}
+
+body{
+    background-color: rgba(255, 242, 245, 1);
 }
 
 /*ACA EMPIEZAN LAS APLICACIONES*/
 
 
 h1 {
-    font-family: "display mi nombre", serif;
-    font-size: 3.8rem;
-    line-height: 6rem;
-    color: rgb(255, 255, 255);
+    font-family: "playfair mi nombre", serif;
+    font-size: 4rem;
+    line-height: 5rem;
+    color: #ffffff;
     text-align: right;
 }
 
 h2 {
-    font-family: "aleg sans sc B", sans-serif;
-    color: rgb(119, 16, 45);
-    font-size: 1.7rem;
+    font-family: "versalita R", sans-serif;
+    color: rgb(101, 16, 39);
+    font-size: 5rem;
     text-align: center;
-    line-height: 3rem;
 }
 
 h3 {
-    font-family: "unna I", serif;
-    font-size: 1.2rem;
-    text-align: center;
-    color: rgb(109, 14, 44);
+    font-family: "versalita B", sans-serif;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    text-align: left;
+    color: rgb(101, 16, 39);
 }
-
-
 
 p {
-    text-wrap-style: balance;
-    line-height: 1.7rem;
-    text-align: center;
-}
-
-a {
-    text-decoration: double;
-    font-size: 1.2rem;
-    color: rgb(238, 195, 208);
+    font-size: 1.25rem;
+    text-align: left;
+    font-family: "unna R", serif;
     line-height: 1.8rem;
 }
 
-
-
 #presentación {
-    background-image: url(img/inicio.jpg);
-    background-position: center;
-    background-size: cover;
-    min-height: 80vh;
-    padding-top: 100px;
-    padding-right: 80px;
-    text-align: right;
-    text-wrap-style: balance;
+    background-color: rgb(101, 16, 39);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    p {
-        font-family: "aleg sans sc L", sans-serif;
-        color: rgb(248, 239, 242);
-        font-size: 1.6rem;
-        text-align: right;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        font-size: 2rem;
-    }
-}
-
-
-#introducción {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    width: 1920px;
+    height: 900px;
     justify-content: space-between;
     align-items: center;
-
-    .titular_especial {
-        font-family: "aleg sans sc L", sans-serif;
-        color: rgb(109, 14, 44);
-        font-size: 3rem;
-        line-height: 2.5rem;
-        text-align: left;
-        padding: 70px;
-        margin: 100px;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        box-sizing: border-box;
-    }
-
-    .info_quien_soy {
-        padding: 70px;
-        margin: 80px;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        box-sizing: border-box;
-        text-align: left;
-    }
 }
 
-
-#lluvia_de_palabras ul {
+.present_conteiner{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 0;
-    margin: 15px 0;
+    width: 850px;
+    padding-right: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    p.carrera {
+        font-family: "versalita R", sans-serif;
+        text-align: left;
+        color: #FFF;
+        font-size: 1.7rem
+    }
 }
 
-#lluvia_de_palabras li {
-    background-color: rgb(109, 14, 44);
-    color: rgb(248, 239, 242);
-    padding: 8px 16px;
-    border-radius: 10px;
-    font-family: "aleg sans sc R", serif;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#introducción_apodo {
+    display: flex;
+    width: 1340px;
+    height: 440px;
+    padding: 60px 30px;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    .grupo_frase{
+        display: flex;
+        width: 373px;
+        height: 185px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        p.frase {
+            font-family: "versalita L", sans-serif;
+            color: rgb(101, 16, 39);
+            font-size: 3rem;
+            line-height: 2.5rem;
+            text-align: center;
+            display: flex;
+            height: 114px;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+}
+
+    .florcitas{
+    text-align: center;
+    font-family: "versalita L", sans-serif;
+    color: rgb(101, 16, 39);
+    font-size: 5rem;
+    display: flex;
+    width: 204px;
+    height: 45px;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+
+    .texto_en_italic{
+    text-wrap-style: balance;
+    text-align: left;
+    font-family: "unna I", serif;
+    width: 600px;
+    height: 206px;
+    line-height: 2rem;
+    }
+
+#lluvia_de_palabras ul{
+    display: flex;
+    width: 1715px;
+    height: 272px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    li{
+        display: flex;
+        width: 160px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(101, 16, 39);
+        border-radius: 5px;
+        color: #ffffff;
+        font-family: "versalita B", sans-serif;
+        font-size: 1.25rem;
+    }
 }
 
 
 /*SECCION DE MI*/
 
-#de_mi {
+de_mi {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -201,42 +278,71 @@ a {
     gap: 90px
 }
 
-#paquete_circulo {
-    margin: 80px;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    padding: 80px;
-    padding-top: 0;
-    padding-bottom: 0;
+#de_mi{
+    display: flex;
+    width: 1400px;
+    height: 570px;
+    padding-left: 65px;
+    padding-right: 65px;
+    justify-content: space-between;
+}
 
-    .bsas {
+.izquierda_circulo{
+    display: flex;
+    width: 440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+.listado_foto{
+    display: flex;
+    width: 290px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    p.bsas{
         text-align: center;
-        color: rgb(119, 16, 45);
-        font-family: "aleg sans sc B", sans-serif;
+        color: rgb(101, 16, 39);
+        font-family: "versalita B", sans-serif;
         font-size: 1.5rem;
         line-height: 2.4rem;
+        width: 290px;
     }
-
-    .minombre {
+    p.minombre{        
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
         font-family: "unna I", serif;
-        background-color: rgb(184, 50, 88);
-        min-height: 5vh;
-        padding: 5px;
-        margin: 5px;
+        font-size: 1.3rem;
+        color: #FFF;
+        border-radius: 5px;
+        background-color: rgb(101, 16, 39);
+    }
+    .fecha{
         text-align: center;
-        color: rgb(248, 239, 242);
-        border-radius: 8px
+        font-family: "Unna R", serif;
+        font-size: 1.5rem;
     }
 }
 
-#un_poco_mas {
-    margin-right: 100px;
-    margin-top: 90px;
-
-    p {
-        text-align: left;
-    }
+.un_poco_mas {
+    display: flex;
+    width: 619px;
+    height: 438px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 }
+
+p.texto_circulo{
+    width: 600px;
+    height: 440px;
+    }
 
 
 /*FORMACIÓN*/
@@ -244,25 +350,30 @@ a {
 
 #formación {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    width: 1448px;
+    padding: 40px 80px;
+    justify-content: space-between;
+    border-radius: 20px;
+    border-top: 2px solid #651027;
+    border-bottom: 2px solid #651027;
 
-    p {
-        font-family: "aleg sans sc L", serif;
+    p.titular_form {
+        font-family: "unna I", serif;
+        text-align: center;
+        font-size: 1.5rem;
+        color: rgb(109, 14, 44);
+    }
+
+    p.bajada_formación {
+        font-family: "versalita L", serif;
         text-align: center;
         font-size: 1.3rem;
     }
 
-    .fecha {
+    p.fecha {
         font-family: "unna R", serif;
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -272,141 +383,331 @@ a {
 
 #frase {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 100px;
+    width: 1600px;
+    height: 310px;
+    justify-content: center;
+    gap: 90px;;
+    align-items: flex-end;
 
     .flor {
         font-family: "display mi nombre", serif;
         font-size: 20rem;
-        color: rgb(109, 14, 44);
-        padding-top: 95px;
-        margin-top: 20px;
-        margin-left: 100px;
-        padding-left: 60px;
+        color: rgb(101, 16, 39);
+        display: flex;
+        width: 230px;
+        height: 230px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .escrito {
-        font-family: "aleg sans sc L", sans-serif;
+        font-family: "versalita L", sans-serif;
         font-size: 3rem;
         line-height: 1;
         margin: 40px;
-        max-width: 700px;
+        max-width: 800px;
         text-align: left;
-        color: rgb(109, 14, 44);
+        color: rgb(101, 16, 39);
+        width: 1000px;
+        height: 185px;
     }
 }
 
 
-/*linea de corativa*/
+/*ir a protfolio*/
 
-
-.linea_divisoria {
-    border: none;
-    height: 2px;
-    background-color: rgb(184, 50, 88);
-    width: 80%;
-    margin: 30px auto;
-    border-radius: 2px;
+#ir_a_portfolio{
+    display: flex;
+    width: 1276px;
+    padding: 60px 70px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(101, 16, 39);
 }
 
-
-/*HABILIDADES*/
-
-#habilidades {
+.info{
     display: flex;
+    width: 267px;
     flex-direction: column;
-    align-items: center;
-    margin: 50px;
-    gap: 30px;
-
-    ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 100px;
-    }
-}
-
-
-/*APTITUDES*/
-
-
-#como_soy {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 100px;
-    max-width: 1200px;
-    gap: 50px;
-
-    h2 {
-        margin-left: 100px;
-        padding-left: 100px;
+    align-items: flex-start;
+    gap: 20px;
+    h3{
+        font-family: "versalita B", sans-serif;
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: left;
+        color: #FFF;
     }
     p{
-        margin-left: 100px;
-        padding-left: 100px;
-        text-align: left;
+        display: flex;
+        width: 269px;
+        height: 90px;
+        flex-direction: column;
+        justify-content: center;
+        color: #FFF;
     }
+}
+
+p.boton_ir_portfolio{
+    display: flex;
+    height: 46px;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-size: 20px;
+    font-family: "versalita B", sans-serif;
+}
+
+.fotos_ir_portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+}
+
+
+/*HABILIDADES Y APTITUDES*/
+
+#habilidades_aptitudes {
+    display: flex;
+    width: 1284px;
+    height: 460px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.habilidades{
+    display: flex;
+    width: 518px;
+    height: 400px;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(101, 16, 39);
+}
+
+.lista_programas ul{
+    display: flex;
+    height: 224px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 15px 45px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.aptitudes{
+    display: flex;
+    width: 703px;
+    height: 400px;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(101, 16, 39);
 }
 
 
 /*footer*/
 
-
-#contenedor {
+footer{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
-    background-color: rgb(119, 16, 45);
-    padding: 50px;
-    text-align: center;
-    p{
-        font-family: "aleg sans sc R", sans-serif;
+    height: 280px;
+    padding: 15px 100px 0 100px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+    background-color: rgb(101, 16, 39);
+    max-width: 1920px;
+}
+
+#contenedor_superior{
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.catedra{
+    display: flex;
+    width: 200px;
+    height: 41px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+    p.texto_livianofooter{
+        color: #FFF;
+        font-family: "versalita L", sans-serif;
         font-size: 1rem;
-        text-align: left;
-        color: rgb(255, 255, 255);
+        line-height: 0.7rem;
     }
 }
 
-#contenedor{
-    .trabajemos_juntos{
-        font-family: "unna R", serif;
-        text-align: center;
-        font-size: 2rem;
-        color: rgb(255, 255, 255);
-        line-height: 2.5rem;
+.contactame_footer{
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    align-items: center;    
+    gap: 20px;
+    p.si_te_gusto{
+        color: #FFF;
+        font-family: "versalita L", sans-serif;
+        font-size: 1.3rem;
+        line-height: 1rem;
     }
-    .invitacion{
-        font-family: "unna R", serif;
-        text-align: center;
-        font-size: 1.2rem;
-        color: rgb(255, 255, 255);
-        line-height: 1.8rem;
-        max-width: 700px;
-    }
-    .noteasustes{
-        font-family: "aleg sans sc L", sans-serif;
-        text-align: center;
-        font-size: 0.8rem;
-        color: rgb(255, 255, 255);
-        line-height: 1.5rem;
-        max-width: 700px;
+    p.invitacion{
+        color: #FFF;
+        font-family: "versalita B", sans-serif;
+        font-size: 1.3rem;
+        line-height: 1rem;
     }
 }
 
-#contenedor{
-    ul{
-            display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+.boton_footer{
+    display: flex;
+    height: 30px;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px ;
+    border-radius: 5px;
+    border: 1px solid #F0DACC;
+}
+
+p.boton_footer{
+    font-family: "versalita B", sans-serif;
+    color: #FFF;
+    font-size: 1rem;
+    }
+
+.redes ul{
+    display: flex;
+    width: 168px;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
+}
+
+.contenedor_inferior{
+    display: flex;
+    width: 1920px;
+    height: 50px;
+    padding: 10px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(240, 218, 204, 0.80);
+    font-family: "versalita R", serif;
+    color: rgb(101, 16, 39);
+}
+
+
+/*PORTFOLIO APLICACIONES*/
+
+#proyectos{
+    display: flex;
+    height: 1808px;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.presentación_proyectos{
+    display: flex;
+    width: 1280px;
+    height: 308px;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        font-size: 3rem;
     }
+    p.proyecto_italic{
+        display: flex;
+    width: 628px;
+    height: 187px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "unna I", serif;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    }
+}
+
+.galeria_click{
+    display: flex;
+    width: 1600px;
+    height: 1400px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+
+.identidad{
+    display: flex;
+    width: 600px;
+    height: 600px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editorial{
+    display: flex;
+    width: 600px;
+    height: 600px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fotográfia{
+    display: flex;
+    width: 600px;
+    height: 600px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.afiche{
+    display: flex;
+    width: 600px;
+    height: 600px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+p.categoria{
+    display: flex;
+    width: 600px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(101, 16, 39);
+    text-align: center;
+    font-family: "Alegreya Sans SC";
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: 1px solid rgb(101, 16, 39);
 }
