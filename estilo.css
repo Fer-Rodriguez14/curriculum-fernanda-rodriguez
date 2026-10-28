@@ -78,7 +78,7 @@
 * {
     font-family: "unna R", serif;
     font-size: 1.1rem;
-    text-align: left;
+    text-align: left; /*no te va a convenir establecer desde acá que todo esté marginado a la izquierda*/
     list-style: none;
     padding: 0;
     margin: 0;
@@ -90,17 +90,17 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 1920px;
-    padding: 10px 100px;
-    padding-top: 10px;
+    max-width: 1920px; /*en general no está bueno tener tamaños máximos en estos elementos porque te complican en pantallas más grandes, te voy a marcar dónde estás aplicando esto o donde hay medidas fijas y capturas en la pull request para que veas cómo lo veo yo*/
+    padding: 10px 100px; /* en lugar de poner padding tan grande te recomiendo dejarlo sólo con 10px como auxiliar y, para que se centre, usar justify-content: center; en lugar de space between como tenés en la línea 90 */
+    padding-top: 10px; /*esto está de más porque lo estableciste en la línea anterior*/
     background-color: rgb(101, 16, 39);
-    height: 90px;
+    height: 90px; /*esto es medida fija que se puede lograr con los paddings*/
 }
 
 .header_conteiner{
     display: flex;
-    width: 1700px;
-    height: 65px;
+    width: 1700px; /*acá te va a complicar la vida la medida fija haciendo mobile porque no se va a achicar, te conviene dejar este valor en 100% y agregarle max-width: 1700px*/
+    height: 65px; /*esta medida fija no va*/
     padding-bottom: 5px;
     justify-content: space-between;
     align-items: center;
@@ -111,7 +111,7 @@ nav {
     display: flex;
     gap: 40px;
     align-items: center;
-    width: 325px;
+    width: 325px; /*medida fija que no va*/
 }
 
 a {
@@ -120,7 +120,7 @@ a {
     line-height: 1rem;
     font-family: "versalita R", sans-serif;
     font-size: 1rem;
-    width: 75px;
+    width: 75px; /*justo en este caso el ancho fijo está bien usado*/
     align-items: center;
 }
 
@@ -130,7 +130,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 70px;
-    max-width: 1920px;
+    max-width: 1920px; /*medida fija*/
 }
 
 body{
@@ -145,7 +145,7 @@ h1 {
     font-size: 4rem;
     line-height: 5rem;
     color: #ffffff;
-    text-align: right;
+    text-align: right; /*esto no suma*/
 }
 
 h2 {
@@ -159,7 +159,7 @@ h3 {
     font-family: "versalita B", sans-serif;
     font-size: 2rem;
     line-height: 3.5rem;
-    text-align: left;
+    text-align: left; /*ya lo declaraste en el selector universal, no repitas*/
     color: rgb(101, 16, 39);
 }
 
@@ -173,21 +173,21 @@ p {
 #presentación {
     background-color: rgb(101, 16, 39);
     display: flex;
-    width: 1920px;
-    height: 900px;
-    justify-content: space-between;
+    width: 1920px; /* acá te conviene usar 100%*/
+    height: 900px; /*en este caso tratá de manejarlo con vh porque las medidas fijas son complejas, pero entiendo que es el tamaño casi de una pantalla, para lograr lo mismo yo usaría que la altura mínima sea de 70vh*/
+    justify-content: space-between; /*esto en pantallas grandes va a crear un espacio muy grande y ya tu iso tiene un buen espacio en blanco, con center en lugar de between queda mucho mejor y te ataja problemas futuros*/
     align-items: center;
 }
 
 .present_conteiner{
     display: flex;
-    width: 850px;
+    width: 850px; /*ancho fijo*/
     padding-right: 100px;
     flex-direction: column;
     align-items: flex-start;
     p.carrera {
         font-family: "versalita R", sans-serif;
-        text-align: left;
+        text-align: left; /*esto está de más*/
         color: #FFF;
         font-size: 1.7rem
     }
@@ -195,16 +195,16 @@ p {
 
 #introducción_apodo {
     display: flex;
-    width: 1340px;
-    height: 440px;
+    width: 1340px;/*ancho fijo*/
+    height: 440px;/*alto fijo que podés reemplazar con vh*/
     padding: 60px 30px;
     align-items: center;
     gap: 50px;
     justify-content: space-between;
     .grupo_frase{
         display: flex;
-        width: 373px;
-        height: 185px;
+        width: 373px; /*ancho fijo que podés reemplazar con max-width*/
+        height: 185px; /*alto fijo que podés reemplazar con vh*/
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -215,10 +215,10 @@ p {
             font-size: 3rem;
             line-height: 2.5rem;
             text-align: center;
-            display: flex;
-            height: 114px;
-            flex-direction: column;
-            justify-content: flex-start;
+            display: flex; /*no hace falta*/
+            height: 114px;/*no hace falta*/
+            flex-direction: column;/*no hace falta*/
+            justify-content: flex-start;/*no hace falta*/
         }
     }
 }
@@ -228,26 +228,27 @@ p {
     font-family: "versalita L", sans-serif;
     color: rgb(101, 16, 39);
     font-size: 5rem;
-    display: flex;
-    width: 204px;
-    height: 45px;
-    flex-direction: column;
-    justify-content: flex-end;
+    line-height: normal;
+    display: flex; /*no hace falta*/
+    width: 204px;/*mejor con paddings*/
+    height: 45px; /*no hace falta*/
+    flex-direction: column; /*no hace falta*/
+    justify-content: flex-end; /*no hace falta*/
     }
 
     .texto_en_italic{
-    text-wrap-style: balance;
-    text-align: left;
+    text-wrap-style: balance; /*el style no va escrito*/
+    text-align: left; /*esto está repetido*/
     font-family: "unna I", serif;
-    width: 600px;
-    height: 206px;
+    width: 600px; /*mejor max-width*/
+    height: 206px; /*medida fija*/
     line-height: 2rem;
     }
 
 #lluvia_de_palabras ul{
     display: flex;
-    width: 1715px;
-    height: 272px;
+    width: 1715px; /*mejor max-width*/
+    height: 272px; /*mejor dar la altura con paddings*/
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -280,11 +281,12 @@ de_mi {
 
 #de_mi{
     display: flex;
-    width: 1400px;
-    height: 570px;
+    width: 1400px; /*mejor max-width*/
+    height: 570px; /*medida fija*/
     padding-left: 65px;
     padding-right: 65px;
     justify-content: space-between;
+    /*por las dudas agregale un gap chiquitito de emergencia*/
 }
 
 .izquierda_circulo{
@@ -298,7 +300,7 @@ de_mi {
 
 .listado_foto{
     display: flex;
-    width: 290px;
+    width: 290px; /*medida fija*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -313,12 +315,12 @@ de_mi {
     }
     p.minombre{        
         display: flex;
-        height: 40px;
+        height: 40px; /*mejor con padding*/
         justify-content: center;
         align-items: center;
         align-self: stretch;
         font-family: "unna I", serif;
-        font-size: 1.3rem;
+        font-size: 1.3rem; /*como las p ya heredan un tamaño de 1.25rem te aconsejo que consideres borrar este porque es mínima la diferencia así tenés menos tamaños dando vueltas y un diseño más consistente*/
         color: #FFF;
         border-radius: 5px;
         background-color: rgb(101, 16, 39);
@@ -332,16 +334,16 @@ de_mi {
 
 .un_poco_mas {
     display: flex;
-    width: 619px;
-    height: 438px;
+    width: 619px; /*medida fija*/
+    height: 438px; /*medida fija*/
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /*no sirve*/
     gap: 20px;
 }
 
 p.texto_circulo{
-    width: 600px;
-    height: 440px;
+    width: 600px; /*mejor con max-width*/
+    height: 440px;/*medida fija*/
     }
 
 
@@ -350,12 +352,13 @@ p.texto_circulo{
 
 #formación {
     display: flex;
-    width: 1448px;
+    width: 1448px; /*aca es mejor combinar un width de 100% con un max-width de esta medida que especificaste*/
     padding: 40px 80px;
     justify-content: space-between;
     border-radius: 20px;
     border-top: 2px solid #651027;
     border-bottom: 2px solid #651027;
+    /*por las dudas agregale un gap chiquitito de seguridad*/
 
     p.titular_form {
         font-family: "unna I", serif;
@@ -373,7 +376,7 @@ p.texto_circulo{
     p.fecha {
         font-family: "unna R", serif;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.3rem; /*este tamaño también es muy parecido al de 1.25 que se hereda de las p en la 166*/
     }
 }
 
@@ -383,11 +386,12 @@ p.texto_circulo{
 
 #frase {
     display: flex;
-    width: 1600px;
-    height: 310px;
+    width: 1600px; /*ancho fijo*/
+    height: 310px; /*mejor con padding*/
     justify-content: center;
     gap: 90px;;
-    align-items: flex-end;
+    align-items: flex-end; /*este queda mejor en center cuando quitás el alto fijo de flor y escrito*/
+    /*para no repetirlo dos veces te conviene poner el color aca*/
 
     .flor {
         font-family: "display mi nombre", serif;
@@ -395,11 +399,11 @@ p.texto_circulo{
         color: rgb(101, 16, 39);
         display: flex;
         width: 230px;
-        height: 230px;
-        padding: 10px;
+        height: 230px; /*ancho fijo*/
+        padding: 10px;/*no es necesario*/
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 10px; /*es innecesario*/
     }
 
     .escrito {
@@ -408,10 +412,10 @@ p.texto_circulo{
         line-height: 1;
         margin: 40px;
         max-width: 800px;
-        text-align: left;
+        text-align: left; /*no repitas*/
         color: rgb(101, 16, 39);
-        width: 1000px;
-        height: 185px;
+        width: 1000px; /*ancho fijo*/
+        height: 185px;/*ancho fijo*/
     }
 }
 
@@ -420,9 +424,9 @@ p.texto_circulo{
 
 #ir_a_portfolio{
     display: flex;
-    width: 1276px;
+    width: 1276px; /*mejor max-width*/
     padding: 60px 70px;
-    justify-content: space-between;
+    justify-content: space-between; /*reemplazá esto por gap*/
     align-items: center;
     border-radius: 10px;
     background-color: rgb(101, 16, 39);
@@ -430,34 +434,34 @@ p.texto_circulo{
 
 .info{
     display: flex;
-    width: 267px;
+    width: 267px; /*ancho fijo*/
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     h3{
-        font-family: "versalita B", sans-serif;
+        font-family: "versalita B", sans-serif; /*esto se repite*/
         font-size: 2rem;
         line-height: 2rem;
-        text-align: left;
+        text-align: left; /*repetido*/
         color: #FFF;
     }
     p{
         display: flex;
         width: 269px;
-        height: 90px;
-        flex-direction: column;
-        justify-content: center;
+        height: 90px; /*alto fijo*/
+        flex-direction: column; /*no es necesario*/
+        justify-content: center; /*no es necesario*/
         color: #FFF;
     }
 }
 
 p.boton_ir_portfolio{
-    display: flex;
-    height: 46px;
+    display: flex; /*innecesario*/
+    height: 46px; /*ya lo seteaste con el padding de abajo*/
     padding: 10px 18px;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    align-items: center; /*innecesario*/
+    gap: 10px; /*innecesario*/
     border-radius: 8px;
     border: 1px solid #FFF;
     color: #FFF;
@@ -477,16 +481,17 @@ p.boton_ir_portfolio{
 
 #habilidades_aptitudes {
     display: flex;
-    width: 1284px;
-    height: 460px;
+    width: 1284px; /*mejor max-width y width al 100%*/
+    height: 460px; /*medida fija, mejor con padding*/
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; /*no es necesario*/
+    /*sumale gap de emergencia*/
 }
 
 .habilidades{
     display: flex;
-    width: 518px;
-    height: 400px;
+    width: 518px; /*mejor max*/
+    height: 400px; /*medida fija*/
     padding: 50px;
     flex-direction: column;
     justify-content: center;
@@ -508,14 +513,14 @@ p.boton_ir_portfolio{
 }
 
 .aptitudes{
-    display: flex;
-    width: 703px;
-    height: 400px;
+    display: flex; /*no es necesario*/
+    width: 703px; /*mejor max*/
+    height: 400px; /*alto fijo, si necesitás modificarlo hacelo con el padding*/
     padding: 50px;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    border-radius: 10px;
+    flex-direction: column; /*no es necesario*/
+    justify-content: center; /*no es necesario*/
+    gap: 20px;/*no es necesario*/
+    border-radius: 10px; /*llegado a este punto veo que le estás poniendo el mismo tamaño de border radius, tal vez te convenga setearlo desde otro lado para que quede repetido una sola vez*/
     border: 2px solid rgb(101, 16, 39);
 }
 
@@ -524,14 +529,14 @@ p.boton_ir_portfolio{
 
 footer{
     display: flex;
-    height: 280px;
+    height: 280px; /*alto fijo*/
     padding: 15px 100px 0 100px;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; /*no es necesario*/
     align-items: center;
     gap: 50px;
     background-color: rgb(101, 16, 39);
-    max-width: 1920px;
+    max-width: 1920px; /*te está trayendo conflictos, mejor aplicá esto en los contenedores*/
 }
 
 #contenedor_superior{
@@ -539,13 +544,13 @@ footer{
     padding: 30px 0;
     justify-content: space-between;
     align-items: flex-start;
-    align-self: stretch;
+    align-self: stretch; /*todos los textos de este contenedor están en el mismo color y lo estás repitiendo varias veces, te conviene setearlo desde acá y no repetit*/
 }
 
 .catedra{
     display: flex;
-    width: 200px;
-    height: 41px;
+    width: 200px; /*fijo*/
+    height: 41px; /*fijo*/
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -560,7 +565,7 @@ footer{
 
 .contactame_footer{
     display: flex;
-    width: 280px;
+    width: 280px; /*fijo*/
     flex-direction: column;
     align-items: center;    
     gap: 20px;
@@ -607,8 +612,8 @@ p.boton_footer{
 
 .contenedor_inferior{
     display: flex;
-    width: 1920px;
-    height: 50px;
+    width: 1920px; /*mejor max o quitarlo, fijate lo que te convenza más*/
+    height: 50px; /*mejor con padding*/
     padding: 10px 0;
     justify-content: space-evenly;
     align-items: center;
@@ -620,9 +625,9 @@ p.boton_footer{
 
 /*PORTFOLIO APLICACIONES*/
 
-#proyectos{
+#proyectos{ /*no se están aplicando porque el # es para llamar a un id y en el código tenés una class*/
     display: flex;
-    height: 1808px;
+    height: 1808px;/*fijo*/
     padding-top: 20px;
     flex-direction: column;
     justify-content: center;
@@ -634,29 +639,29 @@ p.boton_footer{
 
 .presentación_proyectos{
     display: flex;
-    width: 1280px;
-    height: 308px;
-    justify-content: space-between;
+    width: 1280px; /*mejor max*/
+    height: 308px; /*fijo*/
+    justify-content: space-between; /*mejor gap*/
     align-items: center;
     h2{
         font-size: 3rem;
     }
     p.proyecto_italic{
-        display: flex;
-    width: 628px;
-    height: 187px;
-    flex-direction: column;
-    justify-content: center;
+        display: flex; /*innecesario*/
+    width: 628px; /*mejor max*/
+    height: 187px; /*fijo*/
+    flex-direction: column; /*innecesario*/
+    justify-content: center;/*innecesario*/
     font-family: "unna I", serif;
     font-size: 1.2rem;
-    line-height: 1.8rem;
+    line-height: 1.8rem; /*repetido*/
     }
 }
 
 .galeria_click{
     display: flex;
-    width: 1600px;
-    height: 1400px;
+    width: 1600px; /*mejor max*/
+    height: 1400px; /*fijo*/
     padding: 30px;
     justify-content: center;
     align-items: center;
